@@ -1,0 +1,67 @@
+{%extends 'base.html'%} {%block body_block %}
+<div class="container" align="center">
+    <h1>Time Table</h1>
+    <hr>
+    <table class="table table-bordered table-dark">
+        <thead align="center">
+            <td>Days</td>
+            <td>1 <br>
+            </td>
+            <td>2</td>
+            <td>Break</td>
+            <td>3</td>
+            <td>4</td>
+            <td>Lunch</td>
+            <td>5</td>
+            <td>6</td>
+            <td>Break</td>
+            <td>7</td>
+            <td>8</td>
+            {%for e in columninsert%}
+            <td>{{e.periodno}}</td>
+            {%endfor%}
+
+        </thead>
+
+        {%for e in monday%}
+        <tr align="center">
+            <td>{{e.day}}</td>
+            <td>{{e.firstperiod}}</td>
+            <td>{{e.secondperiod}}</td>
+            <td>
+                <font color='pink'>Break
+            </td>
+            <td>{{e.thirdperiod}}</td>
+            <td>{{e.fourthperiod}}</td>
+            <td>
+                <font color='red'>Lunch
+            </td>
+            <td>{{e.fifthperiod}}</td>
+            <td>{{e.sixthperiod}}</td>
+            <td>
+                <font color='pink'>Break
+            </td>
+            <td>{{e.seventhperiod}}</td>
+            <td>{{e.eightperiod}}</td>
+            {%for e in columninsert%}
+            <td>{{e.}}</td>
+
+            {%endfor%}
+            <td><a href="/update/{{e.id}}" style="margin: 5px;" class="btn btn-danger">Update</a>
+                <td><a href="/delete/{{e.id}}" style="margin: 5px;" class="btn btn-danger">delete
+                </a>
+
+                </td>
+
+        </tr>
+        {%endfor%}
+
+    </table>
+    <a href="/insert" style="margin: 5px;" class="btn btn-primary">
+        <h3>Insert Another Row On TimeTable</h3>
+    </a>
+    <a href="/columninsert" style="margin: 5px;" class="btn btn-primary">
+        <h3>Insert Another column On TimeTable</h3>
+</div>
+
+{%endblock%}

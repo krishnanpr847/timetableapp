@@ -1,0 +1,11 @@
+<!doctype html> {%extends 'base.html'%} {%block body_block %}
+<hr>
+<div class="container">
+    <h1>Register Here</h1>
+    <hr>
+    <form action="" method="POST">
+        {{form.as_p}} {%csrf_token%}
+        <input type="submit" class="btn btn-primary" value="Register">
+    </form>
+</div>
+{%endblock%}

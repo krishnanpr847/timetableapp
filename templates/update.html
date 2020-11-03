@@ -1,0 +1,20 @@
+<!doctype html> {%extends 'base.html'%} {%block body_block %}
+<hr>
+<div class="container">
+    <h1> Update/Edit Monday TimeTable</h1>
+    <hr>
+    <form action="" method="POST">
+        {%csrf_token%}
+        <h4>Day : <input type="text" name="day" value="{{update.day}}"></h4>
+        <h4>FirstPeriod : <input type="text" name="firstperiod" value="{{update.firstperiod}}"></h4>
+        <h4>SecondPeriod : <input type="text" name="secondperiod" value="{{update.secondperiod}}"></h4>
+        <h4>ThirdPeriod : <input type="text" name="thirdperiod" value="{{update.thirdperiod}}"></h4>
+        <h4>FourthPeriod : <input type="text" name="fourthperiod" value="{{update.fourthperiod}}"></h4>
+        <h4>FifthPeriod : <input type="text" name="fifthperiod" value="{{update.fifthperiod}}"></h4>
+        <h4>SixthPeriod : <input type="text" name="sixthperiod" value="{{update.sixthperiod}}"></h4>
+        <h4>SeventhPeriod : <input type="text" name="seventhperiod" value="{{update.seventhperiod}}"></h4>
+        <h4>EighthPeriod : <input type="text" name="eightperiod" value="{{update.eightperiod}}"></h4>
+        <input type="submit" class="btn btn-success" value="Update/Edit">
+    </form>
+</div>
+{%endblock%}

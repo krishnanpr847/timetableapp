@@ -1,0 +1,11 @@
+<!doctype html> {%extends 'base.html'%} {%block body_block %}
+<div.container align='center'>
+    <h1>Login to write Exam</h1>
+    <hr>
+    <form action="" method="POST">
+        {{form.as_p}} {%csrf_token%}
+        <button type="submit" class="btn btn-primary">LOGIN</button>
+    </form>
+
+</div.container>
+{%endblock%}

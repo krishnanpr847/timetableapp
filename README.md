@@ -1,2 +1,0 @@
-# timetableapp
-to shankar anna
